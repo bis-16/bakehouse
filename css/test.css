@@ -1,0 +1,30 @@
+/*.background{
+	width: 100vw;
+	height: 70vh;
+	background-image: url('../img/bg/header_new.jpg');
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}*/
+.background1 {
+  width: 100vw;
+  height: 70vh;
+  background-image: url("../img/bg/header_new.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF; }
+
+.background2 {
+  width: 100vw;
+  height: 70vh;
+  background-image: url("../img/bg/header_new.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF; }
+
+/*# sourceMappingURL=test.css.map */
