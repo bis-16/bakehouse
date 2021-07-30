@@ -1,4 +1,3 @@
-
-$(window).scroll(function(){
-    $('.background').bgscroll();
-})
+// $(window).scroll(function(){
+//     $('.background').bgscroll();
+// })

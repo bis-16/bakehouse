@@ -1,8 +1,8 @@
 const images = () => {
 //всплывашка фото на весь экран по щелчку
     const imgPopup = document.createElement('div'),
-        workSection = document.querySelector('.js_cakes'),
-        bigImage = document.createElement('img');
+       workSection = document.querySelector('.js_cakes'),
+          bigImage = document.createElement('img');
 
     imgPopup.classList.add('popup')
     workSection.appendChild(imgPopup)

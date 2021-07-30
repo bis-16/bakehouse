@@ -23,7 +23,8 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/76510108" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
-<!--    <link rel="stylesheet" href="css/preloader.css">-->
+
+    <!--    <link rel="stylesheet" href="css/preloader.css">-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
@@ -37,6 +38,7 @@
 </head>
 <body>
 
+<!--Preloader-->
 <!--<section class="preloader">-->
 <!--    <div class="preloader__row">-->
 <!--        <div class="preloader__item"></div>-->
@@ -92,12 +94,12 @@
         </div>
         <nav class="header__nav">
             <ul class="menu header__menu">
-                <li><a class="header_menu_btn0" href="#menulist">Десерты</a></li>
-                <li><a class="header_menu_btn0" href="#about">Обо мне</a></li>
-                <li><a class="header_menu_btn0" href="#deliver">Доставка</a></li>
-                <li><a class="header_menu_btn0" href="#feedback">Отзывы</a></li>
-<!--                <li><a href="#sale">Акции</a></li>-->
-                <li><a class="header_menu_btn0" href="#contacts">Контакты</a></li>
+                <li><a class="burger_menu__btn" href="#menulist">Десерты</a></li>
+                <li><a class="burger_menu__btn" href="#about">Обо мне</a></li>
+                <li><a class="burger_menu__btn" href="#deliver">Доставка</a></li>
+                <li><a class="burger_menu__btn" href="#feedback">Отзывы</a></li>
+<!--            <li><a href="#sale">Акции</a></li>-->
+                <li><a class="burger_menu__btn" href="#contacts">Контакты</a></li>
             </ul>
         </nav>
     </div>
@@ -250,7 +252,7 @@
 </section>
 
 <section class="background2">
-    <span class="uppercase bg2_text">♡ Современные десерты с заботой о вас ♡</span>
+    <span class="uppercase" id="bg2_text">♡ Современные десерты с заботой о вас ♡</span>
 </section>
 <!--<section class="work">-->
 <!--    <div class="container">-->
@@ -266,7 +268,7 @@
 <section class="deliver" id="deliver">
     <div class="container">
         <h2 class="title deliver_title">Доставка</h2>
-        <img src="img/lena/almonds.png" alt="almonds" class="bg_img_right almonds">
+        <img src="img/lena/almonds.png" alt="almonds" class="bg_img_right" id="almonds">
         <div class="deliver_wrapper">
             <div class="deliver_item">
                 <div class="round deliver_round0">
@@ -284,7 +286,7 @@
             </div>
 
             </div>
-        <img src="img/lena/nut.png" alt="huzlenut" class="bg_img_left huzlenut">
+        <img src="img/lena/nut.png" alt="huzlenut" class="bg_img_left" id="huzlenut">
         </div>
 </section>
 
@@ -350,7 +352,7 @@
     <div class="container">
         <h2 class="title contacts_title">Контакты</h2>
 <!--        <div class="title_mini">Скорее закажи</div>-->
-        <img src="img/lena/green.png" alt="green" class="bg_img_right green">
+        <img src="img/lena/green.png" alt="green" class="bg_img_right" id="green">
         <div class="wrapper_contacts">
             <div class="text">
                 <b>Связаться со мной для заказа:</b>

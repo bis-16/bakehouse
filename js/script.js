@@ -4,49 +4,40 @@
 document.addEventListener('DOMContentLoaded',()=> {
 
     const btnMenulist = document.querySelectorAll('.menulist_item'),
-        menulistContent = document.querySelectorAll('.js_cakes');
+      menulistContent = document.querySelectorAll('.js_cakes'),
+              cakeImg = document.querySelectorAll('.cake_img'),
+          wrapperHide = document.querySelector('.wrapper_hide');
 
-    function hideMenulistContent() {
-        menulistContent.forEach(item => {
-            //item.style.display = 'none';
-            item.classList.add('hide');
-            item.classList.remove('show', 'fade');
-        });
+
+
+
+
+    function MenulistContent(i) {
+        function hideMenulistContent() {
+            menulistContent.forEach(item => {
+                item.classList.add('hide');
+                item.classList.remove('show', 'fade');
+            });
+        }
+        function showMenulistContent(i = 0) {
+            menulistContent[i].classList.add('show', 'fade');
+            menulistContent[i].classList.remove('hide');
+        }
+        hideMenulistContent();
+        showMenulistContent(i);
     }
 
-    function showMenulistContent(i = 0) {
-        //menulistContent[i].style.display = 'flex';
-        menulistContent[i].classList.add('show', 'fade');
-        menulistContent[i].classList.remove('hide');
+    function menulistButtons() {
+        for (let i = 0; i < btnMenulist.length; i++) {
+            btnMenulist[i].addEventListener('click', event => {
+                event.preventDefault();
+                MenulistContent(i);
+            });
+        }
     }
 
-/*    function btnMenu(i) {
-        btnMenulist[i].addEventListener('click', ev => {
-            ev.preventDefault();
-//            clearInterval(timerIdRandomImg);
-            hideMenulistContent();
-            showMenulistContent(i);
-        });
-    }*/
-
-    hideMenulistContent();
-    for (let i = 0; i < 4; i++) {
-//        btnMenu(i);
-        btnMenulist[i].addEventListener('click', ev => {
-            ev.preventDefault();
-            hideMenulistContent();
-            showMenulistContent(i);
-        });
-
-    }
-
-
-
-    const cakeImg = document.querySelectorAll('.cake_img'),
-        wrapperHide = document.querySelector('.wrapper_hide');
 
 //    const cloneCakeImg = { ...cakeImg };
-
     class MenuCard {
         constructor(src, srcBig = "img/cakes/cakes/cake9.jpg", alt, text, price, wt, parentSelector) {
             this.src = src;
@@ -95,7 +86,6 @@ document.addEventListener('DOMContentLoaded',()=> {
         }
     }
 
-//random
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
@@ -132,8 +122,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         ).render(1);
     }
 
-    addRandomElements();
-    setInterval(addRandomElements, 5000)
+
 
 //торты
 /*    let cakesName = {
@@ -167,7 +156,6 @@ document.addEventListener('DOMContentLoaded',()=> {
         "от 1 кг.",
         ".wrapper_cakes"
     ).render();
-
     new MenuCard(
         "img/cakes/cakes/cake2_320.jpg",
         "img/cakes/cakes/big/cake2.jpg",
@@ -482,32 +470,7 @@ document.addEventListener('DOMContentLoaded',()=> {
     ).render();
 
 
-    function random3(arr) {
-        for (let i = 0; i < 3; i++) {
-            arr[0] = cakeImg[getRandomInt(10)].src;
-            arr[1] = cakeImg[getRandomInt(10)].src;
-            arr[2] = cakeImg[getRandomInt(10)].src;
-            if (arr[0] === arr[1] || arr[1] === arr[2] || arr[2] === arr[0]) {
-                i--;
-            }
-        }
-    }
-/*
-    function Interval() {
-        // wrapperHide.innerHTML = ``
-        // showMenulistContent(4);
-        //  let arrRandom = [];
-        // random3 (arrRandom);
-        //   for (let i = 0; i<3 ; i++) {
-        //       wrapperHide.innerHTML += `<img src="${arrRandom[i]}" alt="Random_image_${i}" class="cake_img cake_img_js fade_slow">`
-        //   }
-    }
-*/
 //    Interval();
-    showMenulistContent(4);
-
-
-    $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 300) {
                 $('.arrow_up').fadeIn();
@@ -518,12 +481,6 @@ document.addEventListener('DOMContentLoaded',()=> {
                 //$('.main_logo_mini').fadeOut();
                 $('.header').fadeOut();
             }
-
-            /*            if ($(this).scrollTop() > 500) {
-                            $('.main_logo_mini').fadeIn();
-                        } else {
-                            $('.main_logo_mini').fadeOut();
-                        }*/
 
             //parallax ?
             $('.background1').bgscroll({direction: 'bottom'});
@@ -543,8 +500,11 @@ document.addEventListener('DOMContentLoaded',()=> {
             });
         });
 
-    });
 
+
+    /*
+     *  slick - slider
+     */
     $(document).ready(function () {
         let adaptiveSlidesToShow = 1, adaptiveSlidesToScrool = 1;
 
@@ -565,15 +525,19 @@ document.addEventListener('DOMContentLoaded',()=> {
         };
 
         sliderReShow();
-        $(window).resize(() => {
+        $(window).resize( () => {
+//        $(window).resize( () => {
             $('.slider-track').slick('unslick');
+//            document.querySelector('.slider-track').slick('unslick');
             sliderReShow();
         });
 
     });
 
 
-//parallax bg in promo section
+    /*
+     *  parallax bg in promo section
+     */
     var scene = document.getElementById('parallax_logo');
     var parallax0 = new Parallax(scene);
 
@@ -603,87 +567,63 @@ document.addEventListener('DOMContentLoaded',()=> {
         });
     }
 
-    function fAnimation()
+    function allAnimation()
     {
-        const animationType_TypeInY = 'flipInY';
-        const animationType_Bounce = 'bounce'
+        const animationType_TypeInY = 'flipInY',
+               animationType_Bounce = 'bounce',
+                     animationType2 = 'fadeIn',
+                 animationType_InUp = 'fadeInUp';//,
+                    // animationType9 = 'fadeInRight';
 
         //панель с кнопками
-        const animationType2 = 'fadeIn';
         animateCSS('.nav_menu', animationType2);
         animateCSS('.nav_title', animationType2);
-
-
         //десерты
-        const animationType3 = 'fadeIn';
-        animateCSS('.menulist_title', 'fadeInUp');
-        animateCSS('.menulist_item0', animationType3);
-        animateCSS('.menulist_item1', animationType3);
-        animateCSS('.menulist_item2', animationType3);
-        animateCSS('.menulist_item3', animationType3);
-        animateCSS('.button_more_menulist', 'fadeInUp');
-
+        animateCSS('.menulist_title', animationType_InUp);
+        animateCSS('.menulist_item0', animationType2);
+        animateCSS('.menulist_item1', animationType2);
+        animateCSS('.menulist_item2', animationType2);
+        animateCSS('.menulist_item3', animationType2);
+        animateCSS('.button_more_menulist', animationType_InUp);
         //автор
-        const animationType5 = 'fadeInUp';
-
-        animateCSS('.wrapper_about0', animationType5);
-        animateCSS('.wrapper_about', animationType5);
+        animateCSS('.wrapper_about0', animationType_InUp);
+        animateCSS('.wrapper_about', animationType_InUp);
         animateCSS('.author_img', animationType_TypeInY);
         animateCSS('.item0', animationType_TypeInY);
-        // animateCSS('.item0__round__img', animationType_Bounce);
         animateCSS('.item1', animationType_TypeInY);
-        //animateCSS('.item1__round__img', animationType_Bounce);
         animateCSS('.item2', animationType_TypeInY);
-        // animateCSS('.item2__round__img', animationType_Bounce);
-
-        animateCSS('.bg2_text', animationType5);
-
+        //animateCSS('.item0__round__img', animationType_Bounce);
+        //animateCSS('.item1__round__img', animationType_Bounce);
+        //animateCSS('.item2__round__img', animationType_Bounce);
+        animateCSS('#bg2_text', animationType_InUp);
         //доставка
-        const animationType6 = 'fadeInUp';
-        animateCSS('.deliver_title', animationType6);
-
+        animateCSS('.deliver_title', animationType_InUp);
         animateCSS('.deliver_round0', animationType_TypeInY);
         animateCSS('.car0', 'bounce');
-        animateCSS('.deliver_text0', animationType6);
-
+        animateCSS('.deliver_text0', animationType_InUp);
         animateCSS('.deliver_round1', animationType_TypeInY);
         animateCSS('.car1', 'bounce');
-        animateCSS('.deliver_text1', animationType6);
-
+        animateCSS('.deliver_text1', animationType_InUp);
         //Отзывы
-        const animationType7 = 'fadeInUp';
-        animateCSS('.feedback_title', animationType7);
+        animateCSS('.feedback_title', animationType_InUp);
         animateCSS('.slider-container', 'fadeInRight');
-
         //Контакты
-        const animationType8 = 'fadeInUp';
-        animateCSS('.contacts_title', animationType8);
-
+        animateCSS('.contacts_title', animationType_InUp);
         //рассыпанные элементы
-        const animationType9 = 'fadeInRight';
-        animateCSS('.almonds', animationType8);
-        animateCSS('.huzlenut', animationType8);
-        animateCSS('.green', animationType8);
+        animateCSS('#almonds', animationType_InUp);
+        animateCSS('#huzlenut', animationType_InUp);
+        animateCSS('#green', animationType_InUp);
+        //кнопка заказа в футере
+        setInterval(() => {
+            animateCSS('.promo_btn_footer', 'pulse');
+        },100);
     }
-    fAnimation();
 
-    //кнопка заказа в футере
-    setInterval(() => {
-        animateCSS('.promo_btn_footer', 'pulse');
-    },100);
-
-
-/*
-    menulistContent[4].classList.add('show', 'fade');
-    menulistContent[0].classList.remove('hide');
-    menulistContent[1].classList.remove('hide');
-    menulistContent[2].classList.remove('hide');
-    menulistContent[3].classList.remove('hide');*/
 
     /*
-//timer
-
-    const deadline = '2021-05-31';
+     *   timer
+     */
+    /*const deadline = '2021-05-31';
 
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -702,45 +642,43 @@ document.addEventListener('DOMContentLoaded',()=> {
 
     }
 
-
-
-        function getZero(num) {
-            console.log(num);
-            if (num >= 0 && num < 10) {
-                return `0${num}`;
-            }
-            else return num;
+    function getZero(num) {
+        console.log(num);
+        if (num >= 0 && num < 10) {
+            return `0${num}`;
         }
+        else return num;
+    }
 
-        function setClock(selector, endtime) {
-            const timer = document.querySelector(selector),
-                  days = timer.querySelector('#day'),
-                  hours = timer.querySelector('#hour'),
-                  minutes = timer.querySelector('#min'),
-                  seconds = timer.querySelector('#sec'),
-                  timeInterval = setInterval(updateClock, 1000);
+    function setClock(selector, endtime) {
+        const timer = document.querySelector(selector),
+              days = timer.querySelector('#day'),
+              hours = timer.querySelector('#hour'),
+              minutes = timer.querySelector('#min'),
+              seconds = timer.querySelector('#sec'),
+              timeInterval = setInterval(updateClock, 1000);
 
-            updateClock();
+        updateClock();
 
-            function updateClock() {
-                const t = getTimeRemaining(endtime);
-                console.log(t);
-                days.innerHTML = getZero(t.days);
-                hours.innerHTML = getZero(t.hours);
-                minutes.innerHTML = getZero(t.minutes);
-                seconds.innerHTML = getZero(t.seconds);
+        function updateClock() {
+            const t = getTimeRemaining(endtime);
+            console.log(t);
+            days.innerHTML = getZero(t.days);
+            hours.innerHTML = getZero(t.hours);
+            minutes.innerHTML = getZero(t.minutes);
+            seconds.innerHTML = getZero(t.seconds);
 
-                if (t.total <= 0){
-                    clearInterval(timeInterval);
-                }
+            if (t.total <= 0){
+                clearInterval(timeInterval);
             }
         }
+    }
 
-        setClock('.wrapper_timer', deadline);
-    */
+    setClock('.wrapper_timer', deadline);*/
 
 
-    const images = () => {
+
+    const popupBigImages = () => {
 
         const  imgPopup = document.createElement('div'),
             workSection = document.querySelector('.menulist'),
@@ -791,7 +729,13 @@ document.addEventListener('DOMContentLoaded',()=> {
         })
     }
 
-    //export default images;
-    images();
+    addRandomElements();
+    setInterval(addRandomElements, 5000)
+
+    menulistButtons();
+    MenulistContent(4)
+
+    allAnimation();
+    popupBigImages();
 
 });
