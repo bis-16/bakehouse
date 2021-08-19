@@ -3,10 +3,10 @@
 'use strict'
 document.addEventListener('DOMContentLoaded',()=> {
 
-    const btnMenulist = document.querySelectorAll('.menulist_item'),
+    const btnMenulist = document.querySelectorAll('.menulist__item'),
       menulistContent = document.querySelectorAll('.js_cakes'),
-              cakeImg = document.querySelectorAll('.cake_img'),
-          wrapperHide = document.querySelector('.wrapper_hide');
+              //cakeImg = document.querySelectorAll('.cake__img'),
+          wrapperHide = document.querySelector('.wrapper__hide');
 
 
 
@@ -57,21 +57,27 @@ document.addEventListener('DOMContentLoaded',()=> {
             element.innerHTML = `
                 <div class="img_item view view-first">
                     <a href=${pathToBigImg}>
-                        <img src=${this.src} alt=${this.alt} class="cake_img">
+
+                        <img src=${this.src} alt=${this.alt} class="cake-img flash">
                         <div class="mask">
-    <!--                        <h2>Заголовок</h2>-->
-    <!--                        <h3>Текст</h3>-->
-                            <div class="price">${this.price}</div>
-                            <div class="wt">${this.wt}</div>
-                        </div>                    
+                            <div class="flash">
+                                <svg width="320px" height="320px"  class="border">
+                                    <polyline points="319,1 319,319 1,319 1,1 319,1"  />
+                                </svg>
+        <!--                        <h2>Заголовок</h2>-->
+        <!--                        <h3>Текст</h3>-->
+                                <div class="price">${this.price}</div>
+                                <div class="wt">${this.wt}</div>
+                            </div>
+                        </div>
                     </a>  
                     <div class="descr"><p>${this.text}</div>         
                 </div>
             `;
             } else {
             element.innerHTML = `
-                <div class="img_item view view-first">
-                    <img src=${this.src} alt=${this.alt} class="cake_img">
+                <div class="img_item view view-first flash">
+                    <img src=${this.src} alt=${this.alt} class="cake-img">
                     <div class="descr"><p>${this.text}</div>
                     <div class="mask2">
 <!--                        <h2>Заголовок</h2>-->
@@ -100,7 +106,7 @@ document.addEventListener('DOMContentLoaded',()=> {
             "",
             "",
             "",
-            ".wrapper_hide"
+            ".wrapper__hide"
         ).render(1);
         new MenuCard(
             `"img/cakes/cupcakes/cupcake${random1}_320.jpg"`,
@@ -109,7 +115,7 @@ document.addEventListener('DOMContentLoaded',()=> {
             "",
             "",
             "",
-            ".wrapper_hide"
+            ".wrapper__hide"
         ).render(1);
         new MenuCard(
             `"img/cakes/macarons/macarons${random1}_320.jpg"`,
@@ -118,7 +124,7 @@ document.addEventListener('DOMContentLoaded',()=> {
             "",
             "",
             "",
-            ".wrapper_hide"
+            ".wrapper__hide"
         ).render(1);
     }
 
@@ -143,7 +149,7 @@ document.addEventListener('DOMContentLoaded',()=> {
             cakesName[i],
             cakesPrice[i],
             "от 1 кг.",
-            ".wrapper_cakes"
+            ".wrapper__cakes"
         ).render();
     }
 */
@@ -154,7 +160,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Сливочно-карамельный медовик",
         "1300.-",
         "от 1 кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake2_320.jpg",
@@ -163,7 +169,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Изысканный трюфельный торт на темном шоколаде с абрикосовой пропиткой",
         "1400.-",
         "от 1 кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake3_320.jpg",
@@ -172,7 +178,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "RAW-птичье молоко",
         "1500.-",
         "700 гр.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake4_320.jpg",
@@ -181,7 +187,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Меренговый рулет",
         '1600.-<font size="0.8rem"> свежие ягоды</font><p>1300.-<font size="0.5rem"> альтернативное украшение</font>',
         "1.2 кг.<p>1 кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake5_320.jpg",
@@ -190,7 +196,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Сметанный шоколадный торт ИЗ ДЕТСТВА с вишней",
         "1400.-",
         "от 1 кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake6_320.jpg",
@@ -199,7 +205,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Шоколадный RAW с манго<p>(без муки, яиц, молочки, сахара)",
         "1750.-",
         "от 1,5 кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake7_320.jpg",
@@ -208,7 +214,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Классический сметанный торт со сливочно-сметанным кремом",
         "1300.-",
         "от 1 кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake8_320.jpg",
@@ -217,7 +223,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Шоколадно-вишневый торт со сливочным чизкейком внутри и печеньем Орео",
         "1400.-",
         "от 1,5 кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake9_320.jpg",
@@ -226,7 +232,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Сникерс с жареным арахисом, карамелью и арахисовым чизкейком внутри",
         "1400.-",
         "от 1,5 кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy4_320.jpg",
@@ -235,7 +241,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Торт-цифра",
         "1300.-",
         "от 1кг.",
-        ".wrapper_cakes"
+        ".wrapper__cakes"
     ).render();
 
 //капкейки
@@ -246,7 +252,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Ванильные капкейки с нежным фисташковым кремом и кисленьким малиновым курдом",
         "600.-<p>900.-<p>1800.-",
         "4 шт.<p>6 шт.<p>12 шт.",
-        ".wrapper_cupcakes"
+        ".wrapper__cupcakes"
     ).render();
     new MenuCard(
         "img/cakes/cupcakes/cupcake2_320.jpg",
@@ -255,7 +261,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "RAW капкейки (без муки, яиц, молочки, сахара) клубничные на кокосовых сливках",
         "800.-<p>1200.-<p>2400.-",
         "4 шт.<p>6 шт.<p>12 шт.",
-        ".wrapper_cupcakes"
+        ".wrapper__cupcakes"
     ).render();
     new MenuCard(
         "img/cakes/cupcakes/cupcake3_320.jpg",
@@ -264,7 +270,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Шоколадные, с вишней и шапочкой из крема на основе печенья Орео",
         "600.-<p>900.-<p>1800.-",
         "4 шт.<p>6 шт.<p>12 шт.",
-        ".wrapper_cupcakes"
+        ".wrapper__cupcakes"
     ).render();
     new MenuCard(
         "img/cakes/cupcakes/cupcake4_320.jpg",
@@ -273,7 +279,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Ванильные капкейки с домашней карамелью / манго / шоколадным ганашем",
         "600.-<p>900.-<p>1800.-",
         "4 шт.<p>6 шт.<p>12 шт.",
-        ".wrapper_cupcakes"
+        ".wrapper__cupcakes"
     ).render();
     new MenuCard(
         "img/cakes/cupcakes/cupcake5_320.jpg",
@@ -282,7 +288,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Красный бархат с клюквой / вишней / манго",
         "600.-<p>900.-<p>1800.-",
         "4 шт.<p>6 шт.<p>12 шт.",
-        ".wrapper_cupcakes"
+        ".wrapper__cupcakes"
     ).render();
     new MenuCard(
         "img/cakes/cupcakes/cupcake6_320.jpg",
@@ -291,7 +297,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Капкейки с имбирем и домашней апельсиновой карамелью",
         "600.-<p>900.-<p>1800.-",
         "4 шт.<p>6 шт.<p>12 шт.",
-        ".wrapper_cupcakes"
+        ".wrapper__cupcakes"
     ).render();
 
 //макароны
@@ -302,7 +308,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Кокос - клубника / вишня",
         "85.- Франция<p>80.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons2_320.jpg",
@@ -311,7 +317,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Клубничные",
         "85.- Франция<p>80.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons3_320.jpg",
@@ -320,7 +326,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Двойное манго",
         "85.- Франция<p>80.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons4_320.jpg",
@@ -329,7 +335,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Солёная карамель - арахис",
         "85.- Франция<p>80.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons5_320.jpg",
@@ -338,7 +344,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Фисташка - вишня",
         "90.- Франция<p>85.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons6_320.jpg",
@@ -347,7 +353,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Черника - лаванда",
         "90.- Франция<p>85.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons0_320.jpg", //7
@@ -356,7 +362,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Абрикос - розмарин",
         "85.- Франция<p>80.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons0_320.jpg", //8
@@ -365,7 +371,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Шоколад - смородина",
         "90.- Франция<p>85.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons0_320.jpg", //9
@@ -374,7 +380,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Черника - лимон",
         "90.- Франция<p>85.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons0_320.jpg", //10
@@ -383,7 +389,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Груша - дор-блю",
         "90.- Франция<p>85.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons11_320.jpg", //11
@@ -392,7 +398,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Малина - мята",
         "90.- Франция<p>85.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
     new MenuCard(
         "img/cakes/macarons/macarons12_320.jpg", //12
@@ -401,7 +407,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Брусника",
         "85.- Франция<p>80.- Италия",
         "1 шт.<p>(от 6 шт.)",
-        ".wrapper_macarons"
+        ".wrapper__macarons"
     ).render();
 
 //вкусняхи
@@ -412,7 +418,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Тирамису десерт с натуральным крепким горьковатым свежесваренным кофе, амаретто и алкализованным какао",
         "1500.-",
         "от 1 кг.",
-        ".wrapper_yummy"
+        ".wrapper__yummy"
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy2_320.jpg",
@@ -421,7 +427,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Чизкейк сникерс",
         "1400.-",
         "от 1 кг.",
-        ".wrapper_yummy"
+        ".wrapper__yummy"
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy3_320.jpg",
@@ -430,7 +436,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Трюфели апельсиновые /с сыром дор блю / с вишней",
         "550.-",
         "9 шт.",
-        ".wrapper_yummy"
+        ".wrapper__yummy"
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy5_320.jpg",
@@ -439,7 +445,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Набор авторских конфет «Птичье молоко» и Манго-кешью",
         "420.-",
         "9 шт.",
-        ".wrapper_yummy"
+        ".wrapper__yummy"
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy6_320.jpg",
@@ -448,7 +454,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Авторские цветочные наборы со сладостями",
         "от 1700.-",
         "",
-        ".wrapper_yummy"
+        ".wrapper__yummy"
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy7_320.jpg",
@@ -457,7 +463,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Профитроли",
         "80.-",
         "1 шт.<p>(от 4 шт.)",
-        ".wrapper_yummy"
+        ".wrapper__yummy"
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy8_320.jpg",
@@ -466,18 +472,18 @@ document.addEventListener('DOMContentLoaded',()=> {
         "Эклеры",
         "80.-",
         "1 шт.<p>(от 4 шт.)",
-        ".wrapper_yummy"
+        ".wrapper__yummy"
     ).render();
 
 
 //    Interval();
         $(window).scroll(function () {
             if ($(this).scrollTop() > 300) {
-                $('.arrow_up').fadeIn();
+                $('#arrow_up').fadeIn();
                 //$('.main_logo_mini').fadeIn();
                 $('header').fadeIn();
             } else {
-                $('.arrow_up').fadeOut();
+                $('#arrow_up').fadeOut();
                 //$('.main_logo_mini').fadeOut();
                 $('.header').fadeOut();
             }
@@ -486,7 +492,7 @@ document.addEventListener('DOMContentLoaded',()=> {
             $('.background1').bgscroll({direction: 'bottom'});
             $('.background2').bgscroll({direction: 'top'});
         });
-        $('.arrow_up').click(function () {
+        $('#arrow_up').click(function () {
             var _navmenu = $(this).attr("nav");
             $("html, body").animate({scrollTop: $(_navmenu).offset().top + "px"});
             return false;
@@ -576,39 +582,49 @@ document.addEventListener('DOMContentLoaded',()=> {
                     // animationType9 = 'fadeInRight';
 
         //панель с кнопками
-        animateCSS('.nav_menu', animationType2);
-        animateCSS('.nav_title', animationType2);
+        animateCSS('.nav__menu', animationType2);
+        animateCSS('.nav__title', animationType2);
         //десерты
-        animateCSS('.menulist_title', animationType_InUp);
-        animateCSS('.menulist_item0', animationType2);
-        animateCSS('.menulist_item1', animationType2);
-        animateCSS('.menulist_item2', animationType2);
-        animateCSS('.menulist_item3', animationType2);
+        animateCSS('.menulist__title', animationType_InUp);
+        animateCSS('.menulist__item0', animationType2);
+        animateCSS('.menulist__item1', animationType2);
+        animateCSS('.menulist__item2', animationType2);
+        animateCSS('.menulist__item3', animationType2);
         animateCSS('.button_more_menulist', animationType_InUp);
         //автор
-        animateCSS('.wrapper_about0', animationType_InUp);
-        animateCSS('.wrapper_about', animationType_InUp);
-        animateCSS('.author_img', animationType_TypeInY);
-        animateCSS('.item0', animationType_TypeInY);
-        animateCSS('.item1', animationType_TypeInY);
-        animateCSS('.item2', animationType_TypeInY);
+        animateCSS('.about__title', animationType_InUp);
+        animateCSS('.about__title-mini', animationType_InUp);
+        //animateCSS('.wrapper__about0', animationType_InUp);
+        //animateCSS('.wrapper__about', animationType_InUp);
+        //animateCSS('.wrapper__about2', animationType_InUp);
+        animateCSS('.about__text', animationType_InUp);
+        animateCSS('.about__author-img', animationType_TypeInY);
+        animateCSS('.about2__round0', animationType_TypeInY);
+        animateCSS('.about2__round1', animationType_TypeInY);
+        animateCSS('.about2__round2', animationType_TypeInY);
+        //animateCSS('.about__item0', animationType_InUp);
+        //animateCSS('.about__item1', animationType_InUp);
+        //animateCSS('.about__item2', animationType_InUp);
+        animateCSS('.about2__text0', animationType_InUp);
+        animateCSS('.about2__text1', animationType_InUp);
+        animateCSS('.about2__text2', animationType_InUp);
         //animateCSS('.item0__round__img', animationType_Bounce);
         //animateCSS('.item1__round__img', animationType_Bounce);
         //animateCSS('.item2__round__img', animationType_Bounce);
         animateCSS('#bg2_text', animationType_InUp);
         //доставка
-        animateCSS('.deliver_title', animationType_InUp);
-        animateCSS('.deliver_round0', animationType_TypeInY);
+        animateCSS('.deliver__title', animationType_InUp);
+        animateCSS('.deliver__round0', animationType_TypeInY);
         animateCSS('.car0', 'bounce');
-        animateCSS('.deliver_text0', animationType_InUp);
-        animateCSS('.deliver_round1', animationType_TypeInY);
+        animateCSS('.deliver__text0', animationType_InUp);
+        animateCSS('.deliver__round1', animationType_TypeInY);
         animateCSS('.car1', 'bounce');
-        animateCSS('.deliver_text1', animationType_InUp);
+        animateCSS('.deliver__text1', animationType_InUp);
         //Отзывы
-        animateCSS('.feedback_title', animationType_InUp);
+        animateCSS('.feedback__title', animationType_InUp);
         animateCSS('.slider-container', 'fadeInRight');
         //Контакты
-        animateCSS('.contacts_title', animationType_InUp);
+        animateCSS('.contacts__title', animationType_InUp);
         //рассыпанные элементы
         animateCSS('#almonds', animationType_InUp);
         animateCSS('#huzlenut', animationType_InUp);
