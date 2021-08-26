@@ -11,20 +11,32 @@ document.addEventListener('DOMContentLoaded',()=> {
 
 
 
-
+    let pastWrapperIndex = btnMenulist.length;
     function MenulistContent(i) {
-        function hideMenulistContent() {
+
+         function hideMenulistContent() {
+            console.log('_____________________________')
             menulistContent.forEach(item => {
-                item.classList.add('hide');
-                item.classList.remove('show', 'fade');
+                item.classList.add('hide')
+                item.classList.remove('show', 'hide-animation');
             });
         }
+
         function showMenulistContent(i = 0) {
-            menulistContent[i].classList.add('show', 'fade');
-            menulistContent[i].classList.remove('hide');
+            menulistContent[i].classList.add('show');
+            menulistContent[i].classList.remove('hide', 'hide-animation');
+
         }
-        hideMenulistContent();
-        showMenulistContent(i);
+
+        console.log('i', i);
+
+        //hideMenulistContent(i);
+        menulistContent[pastWrapperIndex].classList.add('hide-animation')
+        setTimeout(() => {
+            hideMenulistContent();
+            showMenulistContent(i)
+        }, 400);
+        //setTimeout(showMenulistContent(i),20000);
     }
 
     function menulistButtons() {
@@ -32,6 +44,12 @@ document.addEventListener('DOMContentLoaded',()=> {
             btnMenulist[i].addEventListener('click', event => {
                 event.preventDefault();
                 MenulistContent(i);
+                pastWrapperIndex = i;
+                //for (j = 0; < btnMenulist.length; j++)
+                btnMenulist.forEach((item) => {
+                    item.classList.remove('menulist-btn__active')
+                })
+                btnMenulist[i].classList.add('menulist-btn__active');
             });
         }
     }
@@ -60,7 +78,7 @@ document.addEventListener('DOMContentLoaded',()=> {
 
                         <img src=${this.src} alt=${this.alt} class="cake-img flash">
                         <div class="mask">
-                            <div class="flash">
+                            <div class="flash data-flash">
                                 <svg width="320px" height="320px"  class="border">
                                     <polyline points="319,1 319,319 1,319 1,1 319,1"  />
                                 </svg>
@@ -91,6 +109,20 @@ document.addEventListener('DOMContentLoaded',()=> {
             this.parent.append(element)
         }
     }
+/*
+    function foxyFlowers() {
+        const element = document.createElement('div')
+
+        element.innerHTML = `
+                <a href="https://www.instagram.com/flower_fox_nsk/" target="_blank">
+                    <button class="button-more button_more_menulist">
+                        <div class="text">Цветы от flower_fox_nsk&nbsp;</div>
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                </a>`
+        const parent = document.querySelector('.wrapper__cakes')
+        parent.append(element);
+    }*/
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
@@ -217,6 +249,15 @@ document.addEventListener('DOMContentLoaded',()=> {
         ".wrapper__cakes"
     ).render();
     new MenuCard(
+        "img/cakes/cakes/cake26_320.jpg",
+        "img/cakes/cakes/big/cake26.jpg",
+        "cake26",
+        "Торт 26",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
         "img/cakes/cakes/cake8_320.jpg",
         "img/cakes/cakes/big/cake8.jpg",
         "cake8",
@@ -235,12 +276,201 @@ document.addEventListener('DOMContentLoaded',()=> {
         ".wrapper__cakes"
     ).render();
     new MenuCard(
-        "img/cakes/yummy/yummy4_320.jpg",
-        "img/cakes/yummy/big/yummy4.jpg",
+        "img/cakes/cakes/yummy4_320.jpg",
+        "img/cakes/cakes/big/yummy4.jpg",
         "yummy4",
         "Торт-цифра",
         "1300.-",
         "от 1кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake10_320.jpg",
+        "img/cakes/cakes/big/cake10.jpg",
+        "cake10",
+        "Торт 10",
+        "1300.-",
+        "от 2 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake11_320.jpg",
+        "img/cakes/cakes/big/cake11.jpg",
+        "cake11",
+        "Торт 11",
+        "1400.-",
+        "от 2 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake12_320.jpg",
+        "img/cakes/cakes/big/cake12.jpg",
+        "cake12",
+        "Торт 12",
+        "1400.-",
+        "от 2 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake13_320.jpg",
+        "img/cakes/cakes/big/cake13.jpg",
+        "cake13",
+        "Торт 13",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake14_320.jpg",
+        "img/cakes/cakes/big/cake14.jpg",
+        "cake14",
+        "Торт 14",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake15_320.jpg",
+        "img/cakes/cakes/big/cake15-1.jpg",
+        "cake15",
+        "Торт 15",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake16_320.jpg",
+        "img/cakes/cakes/big/cake16.jpg",
+        "cake16",
+        "Торт 16",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake31_320.jpg",
+        "img/cakes/cakes/big/cake31.jpg",
+        "cake31",
+        "Торт 31",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake17_320.jpg",
+        "img/cakes/cakes/big/cake17.jpg",
+        "cake17",
+        "Торт 17",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake18_320.jpg",
+        "img/cakes/cakes/big/cake18.jpg",
+        "cake18",
+        "Торт 18",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake19_320.jpg",
+        "img/cakes/cakes/big/cake19.jpg",
+        "cake19",
+        "Торт 19",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake20_320.jpg",
+        "img/cakes/cakes/big/cake20.jpg",
+        "cake20",
+        "Торт 20",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake21_320.jpg",
+        "img/cakes/cakes/big/cake21.jpg",
+        "cake21",
+        "Торт 21",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake22_320.jpg",
+        "img/cakes/cakes/big/cake22.jpg",
+        "cake22",
+        "Торт 22",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake23_320.jpg",
+        "img/cakes/cakes/big/cake23.jpg",
+        "cake23",
+        "Торт 23",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake24_320.jpg",
+        "img/cakes/cakes/big/cake24.jpg",
+        "cake24",
+        "Торт 24",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake25_320.jpg",
+        "img/cakes/cakes/big/cake25.jpg",
+        "cake25",
+        "Торт 25",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake27_320.jpg",
+        "img/cakes/cakes/big/cake27.jpg",
+        "cake27",
+        "Торт 27",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake28_320.jpg",
+        "img/cakes/cakes/big/cake28-1.jpg",
+        "cake28",
+        "Торт 28",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake29_320.jpg",
+        "img/cakes/cakes/big/cake29.jpg",
+        "cake29",
+        "Торт 29",
+        "x.-",
+        "от x кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake30_320.jpg",
+        "img/cakes/cakes/big/cake30.jpg",
+        "cake30",
+        "Торт 30",
+        "x.-",
+        "от x кг.",
         ".wrapper__cakes"
     ).render();
 
@@ -409,11 +639,19 @@ document.addEventListener('DOMContentLoaded',()=> {
         "1 шт.<p>(от 6 шт.)",
         ".wrapper__macarons"
     ).render();
-
+    new MenuCard(
+        "img/cakes/macarons/macarons13_320.jpg", //12
+        "img/cakes/macarons/big/macarons13.jpg",
+        "macarone13",
+        "Кокос",
+        "85.- Франция<p>80.- Италия",
+        "1 шт.<p>(от 6 шт.)",
+        ".wrapper__macarons"
+    ).render();
 //вкусняхи
     new MenuCard(
         "img/cakes/yummy/yummy1_320.jpg",
-        "",
+        "img/cakes/yummy/big/yummy1.jpg",
         "yummy1",
         "Тирамису десерт с натуральным крепким горьковатым свежесваренным кофе, амаретто и алкализованным какао",
         "1500.-",
@@ -422,7 +660,7 @@ document.addEventListener('DOMContentLoaded',()=> {
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy2_320.jpg",
-        "",
+        "img/cakes/yummy/big/yummy2.jpg",
         "yummy2",
         "Чизкейк сникерс",
         "1400.-",
@@ -431,7 +669,7 @@ document.addEventListener('DOMContentLoaded',()=> {
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy3_320.jpg",
-        "",
+        "img/cakes/yummy/big/yummy3.jpg",
         "yummy3",
         "Трюфели апельсиновые /с сыром дор блю / с вишней",
         "550.-",
@@ -440,20 +678,11 @@ document.addEventListener('DOMContentLoaded',()=> {
     ).render();
     new MenuCard(
         "img/cakes/yummy/yummy5_320.jpg",
-        "",
+        "img/cakes/yummy/big/yummy5.jpeg",
         "yummy5",
         "Набор авторских конфет «Птичье молоко» и Манго-кешью",
         "420.-",
         "9 шт.",
-        ".wrapper__yummy"
-    ).render();
-    new MenuCard(
-        "img/cakes/yummy/yummy6_320.jpg",
-        "",
-        "yummy6",
-        "Авторские цветочные наборы со сладостями",
-        "от 1700.-",
-        "",
         ".wrapper__yummy"
     ).render();
     new MenuCard(
@@ -474,8 +703,161 @@ document.addEventListener('DOMContentLoaded',()=> {
         "1 шт.<p>(от 4 шт.)",
         ".wrapper__yummy"
     ).render();
-
-
+    new MenuCard(
+        "img/cakes/yummy/yummy9_320.jpg",
+        "img/cakes/yummy/big/yummy9.jpg",
+        "yummy9",
+        "Безе",
+        "80.-",
+        "1 шт.<p>(от 4 шт.)",
+        ".wrapper__yummy"
+    ).render();
+    new MenuCard(
+        "img/cakes/yummy/yummy10_320.jpg",
+        "img/cakes/yummy/big/yummy10.jpg",
+        "yummy10",
+        "Павлова",
+        "120.-",
+        "1 шт.<p>(от 2 шт.)",
+        ".wrapper__yummy"
+    ).render();
+//шоколад
+    new MenuCard(
+        "img/cakes/choko/6_320.jpg",
+        "img/cakes/choko/big/6.jpg",
+        "chocolate6",
+        "Крафтовый молочный бельгийский шоколад с кокосом",
+        "X.-",
+        "1 шт.<p>(~180-200гр)",
+        ".wrapper__chocolate"
+    ).render();
+    new MenuCard(
+        "img/cakes/choko/3_320.jpg",
+        "img/cakes/choko/big/3.jpg",
+        "chocolate3",
+        "Крафтовый молочный бельгийский шоколад с малиной и миндальными лепестками",
+        "X.-",
+        "1 шт.<p>(~180-200гр)",
+        ".wrapper__chocolate"
+    ).render();
+    new MenuCard(
+        "img/cakes/choko/5_320.jpg",
+        "img/cakes/choko/big/5.jpg",
+        "chocolate5",
+        "Крафтовый молочный шоколад с фундуком, карамелью и Бобом тонка",
+        "X.-",
+        "1 шт.<p>(~180-200гр)",
+        ".wrapper__chocolate"
+    ).render();
+    new MenuCard(
+        "img/cakes/choko/2_320.jpg",
+        "img/cakes/choko/big/2.jpg",
+        "chocolate5",
+        "Клубника в шоколаде Кот-д'Ивуар",
+        "500.-<br>750.-<br>1000.-",
+        "6 шт.<br> 9 шт.<br>12шт.",
+        ".wrapper__chocolate"
+    ).render();
+    new MenuCard(
+        "img/cakes/choko/4_320.jpg",
+        "img/cakes/choko/big/4.jpg",
+        "chocolate5",
+        "ТОП набор - клубника в шоколаде + шоколад на выбор",
+        "1000.-",
+        "1 шт.",
+        ".wrapper__chocolate"
+    ).render();
+//цветы
+    new MenuCard(
+        "img/cakes/flowers/flowers1_320.jpg",
+        "img/cakes/flowers/big/flowers1.jpg",
+        "flowers1",
+        "Средний цветочный бокс с макаронс",
+        "от 2200.-",
+        "",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/lena/foxy_320.jpg",
+        "https://www.instagram.com/flower_fox_nsk/",
+        "flower_foxy_nsk logo",
+        'Оформление цветами от @flower_foxy_nsk',
+        "",
+        "",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers2_320.jpg",
+        "img/cakes/flowers/big/flowers2.jpg",
+        "flowers2",
+        'Набор "Романтика" с клубникой в шоколаде',
+        "от 1500.-",
+        "",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers11_320.jpg",
+        "img/cakes/flowers/big/flowers11.jpg",
+        "flowers3",
+        "Крафтовый шоколад с цветочной корзинкой",
+        "от 1250.-",
+        "",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers12_320.jpg",
+        "img/cakes/flowers/big/flowers12.jpg",
+        "flowers3",
+        "Набор для именника / к выписке",
+        "от 2700.-",
+        "",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers13_320.jpg",
+        "img/cakes/flowers/big/flowers13.jpg",
+        "flowers13",
+        "Средний цветочный бокс ",
+        "от 2200.-",
+        "",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers14_320.jpg",
+        "img/cakes/flowers/big/flowers14.jpg",
+        "flowers14",
+        "Большой цветочный бокс",
+        "от 2790.-",
+        "2-4 капкейка<br>или 12 макаронс",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers15_320.jpg",
+        "img/cakes/flowers/big/flowers15.jpg",
+        "flowers15",
+        "Мини-бокс с цветами и макрон",
+        "от 1700.-",
+        "6 макарон",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers16_320.jpg",
+        "img/cakes/flowers/big/flowers16.jpg",
+        "flowers16",
+        "Средний цветочный бокс",
+        "от 2200.-",
+        "",
+        ".wrapper__flowers"
+    ).render();
+    // new MenuCard(
+    //     "img/cakes/flowers/flowers17_320.jpg",
+    //     "img/cakes/flowers/big/flowers17.jpg",
+    //     "flowers17",
+    //     "название",
+    //     "от ХХХ.-",
+    //     "",
+    //     ".wrapper__flowers"
+    // ).render();
 //    Interval();
         $(window).scroll(function () {
             if ($(this).scrollTop() > 300) {
@@ -700,9 +1082,9 @@ document.addEventListener('DOMContentLoaded',()=> {
             workSection = document.querySelector('.menulist'),
                bigImage = document.createElement('img');
 
-        console.log("imgPopup=",imgPopup);
-        console.log("workSection=",workSection);
-        console.log("bigImage=",bigImage);
+        // console.log("imgPopup=",imgPopup);
+        // console.log("workSection=",workSection);
+        // console.log("bigImage=",bigImage);
 
         imgPopup.classList.add('popup')
         workSection.appendChild(imgPopup)
@@ -728,15 +1110,19 @@ document.addEventListener('DOMContentLoaded',()=> {
                 event.preventDefault()
                 let windowWide = window.innerWidth
                 console.log("target=", target);
-                console.log("windowWide=", typeof (windowWide), windowWide);
-                if ((windowWide > 1000) && (target && (target.classList.contains('cake_img')) || (target.classList.contains('mask')))) {
+                // console.log("windowWide=", typeof (windowWide), windowWide);
+                if ((windowWide > 767) && (target && (target.classList.contains('cake_img'))
+                    || (target.classList.contains('mask'))
+                    || (target.classList.contains('data-flash'))
+                    )) {
                     imgPopup.style.display = 'flex';
-                    const path = target.parentNode.getAttribute('href');
+                    const path = target.parentNode.parentNode.getAttribute('href');
+                    // console.log("path=", target.parentNode.parentNode)
                     bigImage.setAttribute('src', path)
                 } else {
                     console.log("else");
                 }
-                console.log("4");
+                // console.log("4");
                 if (target && target.matches('div.popup') || target.matches('img')) {
                     //if (target.matches('div.popup') && target.matches('popup')){
                     imgPopup.style.display = 'none';
@@ -749,7 +1135,7 @@ document.addEventListener('DOMContentLoaded',()=> {
     setInterval(addRandomElements, 5000)
 
     menulistButtons();
-    MenulistContent(4)
+    MenulistContent(btnMenulist.length)
 
     allAnimation();
     popupBigImages();

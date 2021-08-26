@@ -18,6 +18,7 @@ html, body{
 	font-size: 16px;
 	width: 100%;
 	min-width: 320px;
+	user-select: none;
 }
 * {
 	box-sizing: border-box;
@@ -62,25 +63,25 @@ h5{color: hotpink}
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
+
+	animation-name: fade;
+	animation-duration: 1.0s;
+}
+.hide-animation{
+	animation-name: noFade;
+	animation-duration: .5s;
 }
 .hide{
 	display: none;
 }
-.fade{
-	animation-name: fade;
-	animation-duration: 1.0s;
-}
-.fade_slow{
-	animation-name: fade;
-	animation-duration: 2.0s;
-}
+
 @keyframes fade {
-	from{
-		opacity: 0.1;
-	}
-	to{
-		opacity: 1;
-	}
+	from{opacity: 0.1;}
+	to{opacity: 1;}
+}
+@keyframes noFade {
+	from{opacity: 1;}
+	to{opacity: 0;}
 }
 
 
@@ -224,6 +225,7 @@ h1{
 			padding: 18px 32px 18px 32px;
 			background-color: rgba(0,0,0,0);
 			border: 0;
+			border-radius: 20px;
 			text-transform: uppercase;
 			font-size: 1.2rem;
 			cursor: pointer;
@@ -506,25 +508,37 @@ svg {
 
 .menulist{ //круглое меню с 4 кнопками
 	padding: $padding_container;
-	min-height: 100%;
+	//min-height: 100%;
 	background-color: $color_bg2;
 	z-index: 10;
+	transition: width 1s ease-in-out;
+	//transition:width 1s ease-in-out;
+	//&:hover{
+	//	//background-color: red;
+	//	transition: 1s ease-in-out;
+	//}
+
 	&__wrapper {
+		//position: sticky;
+		//top: 0;
+		//background-color: $color_bg2;
+		border-radius: 50px;
+		opacity: 95%;
 		display: flex;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
-		z-index: 10;
+		z-index: 20;
 	}
 	&__item {
 		z-index: 10;
 		margin: 5px;
-		&:hover > button {
+		&:hover > button{
 			background-image: linear-gradient(to top, white 0%, white 100%);
 			color: red;
 			border: 1px solid $color_lightpink;
 			box-shadow: 0px 0px 20px 20px rgba(252, 130, 151, 0.2);
 		}
-		&:hover > .round {
+		&:hover > .round{
 			background-color: $color_lightpink;
 			border: 1px solid $color_lightpink;
 			box-shadow: 0px 0px 20px 20px rgba(252, 130, 151, 0.2);
@@ -559,16 +573,18 @@ svg {
 	}
 
 	.js_cakes{
-
+		transition: 1s;
 		a {
 			text-decoration: none;
 			color: black;
 		}
 	}
 
-	.wrapper__cakes, .wrapper__macarons, .wrapper__cupcakes, .wrapper__yummy, .wrapper__hide{
+	.wrapper__cakes, .wrapper__macarons, .wrapper__cupcakes, .wrapper__chocolate,
+	.wrapper__yummy, .wrapper__flowers, .wrapper__hide {
 		margin-top: 20px;
 		z-index: 10;
+
 		.descr{
 			text-align: right;
 			max-width: 320px;
@@ -591,9 +607,10 @@ svg {
 	}
 
 
-	.button_more {
+	.button-more {
 		display: block;
 		margin: 0 auto;
+		transition: .5s;
 		@include btn;
 		margin-top: 40px;
 		a {
@@ -619,7 +636,21 @@ svg {
 		//margin: 5px;
 	}
 }
+.menulist-btn__active{
+	/*button{
+		background-image: linear-gradient(to top, white 0%, white 100%);
+		color: red;
+		border: 1px solid $color_lightpink;
+		box-shadow: 0px 0px 20px 20px rgba(252, 130, 151, 0.2);
+	}*/
+	.round{
+		//background-color: $color_lightpink;
+		background-color: #fff;
+		border: 1px solid $color_lightpink;
+		box-shadow: 0px 0px 20px 20px rgba(252, 130, 151, 0.2);
+	}
 
+}
 
 
 .popup{
@@ -735,8 +766,8 @@ svg {
 	}
 }
 
-.work{
-}
+/* not use */
+/*
 .sale{
 	padding: $padding_container;
 	min-height: 100%;
@@ -779,7 +810,7 @@ svg {
 		}
 	}
 }
-
+*/
 
 
 
@@ -814,6 +845,7 @@ svg {
 				vertical-align: middle;
 				.deliver_img {
 					width: 160px;
+					z-index: 2;
 				}
 			}
 			.deliver__text {
@@ -872,7 +904,7 @@ svg {
 	flex-direction: column;
 	justify-content: space-evenly;
 	.container {
-		.wrapper_contacts {
+		.wrapper__contacts {
 			display: flex;
 			justify-content: space-between;
 			.text {
@@ -978,7 +1010,7 @@ header {
 			display: none;
 		}
 	}
-	.contacts .container .wrapper_contacts iframe{padding-top: 20px}
+	.contacts .container .wrapper__contacts iframe{padding-top: 20px}
 
 	.header__nav {
 		display: block;
@@ -1066,7 +1098,11 @@ header {
 }
 
 
-@media screen and (max-width: 700px) {
+// w-container ~1200px, cont 970px
+// 992px - cont max-width: 750px
+// 767px - cont max-width: none
+
+@media screen and (max-width: 767px) {
 	.feedback {
 		background-color: $color_bg2;
 		.wrapper {
@@ -1079,15 +1115,21 @@ header {
 	}
 	.menulist {
 		&__wrapper {
+			//display: block;
 			.menulist__item {
-				display: inline-block;
-
+				display: flex;
 				.round {
-					height: 100px;
-					width: 100px;
-
+					display: inline-block;
+					height: 55px;
+					width: 55px;
+					//.menulist__item-img{
+					//
+					//}
 					img {
-						height: 100px;
+						height: 50px;
+					}
+					button{
+						display: inline-block;
 					}
 				}
 			}
@@ -1099,7 +1141,7 @@ header {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 	.contacts .container .wrapper__contacts {display: block}
 	.contacts .container .promo_btn_footer {
 		display: flex;
@@ -1115,13 +1157,13 @@ header {
 	.background2 {
 		font-size: 0.98rem;
 	}
-	.about .container .wrapper__about {display: block}
-	.about .container .wrapper__about .about__author-img{
+	.about .container #wrapper__about {display: block}
+	.about .container #wrapper__about .about__author-img{
 		display: block;
 		margin: 0 auto;
 		margin-top: 10px;
 	}
-	.about .container .wrapper__about .about__text{
+	.about .container #wrapper__about .about__text{
 		padding-left: 10px;
 		padding-top: 10px;
 		margin-top: 0;
@@ -1137,6 +1179,11 @@ header {
 }
 @media screen and (max-width: 350px) {
 	.blueberries{display: none}
-	.deliver_wrapper .deliver_item {padding: 0}
+	.deliver__wrapper .deliver__item {padding: 0}
 	.background2{font-size: 0.87rem}
+}
+
+
+.wrapper__hide{
+	//background-color: red;
 }
