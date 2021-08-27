@@ -252,9 +252,9 @@ document.addEventListener('DOMContentLoaded',()=> {
         "img/cakes/cakes/cake26_320.jpg",
         "img/cakes/cakes/big/cake26.jpg",
         "cake26",
-        "Торт 26",
-        "x.-",
-        "от x кг.",
+        "Сливочно-карамельный медовик",
+        "1300.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
@@ -288,61 +288,61 @@ document.addEventListener('DOMContentLoaded',()=> {
         "img/cakes/cakes/cake10_320.jpg",
         "img/cakes/cakes/big/cake10.jpg",
         "cake10",
-        "Торт 10",
+        "Классический сметанный торт со сливочно-сметанным кремом и вишней",
         "1300.-",
-        "от 2 кг.",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake11_320.jpg",
         "img/cakes/cakes/big/cake11.jpg",
         "cake11",
-        "Торт 11",
+        "Изысканный трюфельный торт на темном шоколаде с абрикосовой пропиткой",
         "1400.-",
-        "от 2 кг.",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake12_320.jpg",
         "img/cakes/cakes/big/cake12.jpg",
         "cake12",
-        "Торт 12",
+        "Освежающий черничный сливочный торт с нотками лимона",
         "1400.-",
-        "от 2 кг.",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake13_320.jpg",
         "img/cakes/cakes/big/cake13.jpg",
         "cake13",
-        "Торт 13",
-        "x.-",
-        "от x кг.",
+        "Чернично-лимонный меренговый рулет",
+        "1300.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake14_320.jpg",
         "img/cakes/cakes/big/cake14.jpg",
         "cake14",
-        "Торт 14",
-        "x.-",
-        "от x кг.",
+        "Морковно-ореховый с маком, фундуком и карамелью",
+        "1400.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake15_320.jpg",
         "img/cakes/cakes/big/cake15-1.jpg",
         "cake15",
-        "Торт 15",
-        "x.-",
-        "от x кг.",
+        "Сливочно -карамельный медовик",
+        "1300.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake16_320.jpg",
         "img/cakes/cakes/big/cake16.jpg",
         "cake16",
-        "Торт 16",
+        "Морковный, с ореховым пралине, маком, корицей и вареной домашней карамелью",
         "x.-",
         "от x кг.",
         ".wrapper__cakes"
@@ -351,107 +351,107 @@ document.addEventListener('DOMContentLoaded',()=> {
         "img/cakes/cakes/cake31_320.jpg",
         "img/cakes/cakes/big/cake31.jpg",
         "cake31",
-        "Торт 31",
-        "x.-",
-        "от x кг.",
+        "Медовик на сметанном креме с карамелью",
+        "1300.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake17_320.jpg",
         "img/cakes/cakes/big/cake17.jpg",
         "cake17",
-        "Торт 17",
-        "x.-",
-        "от x кг.",
+        "Шоколадно-вишневый торт со сливочным чизкейком внутри и печеньем Орео",
+        "1400.-",
+        "от 1.5 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake18_320.jpg",
         "img/cakes/cakes/big/cake18.jpg",
         "cake18",
-        "Торт 18",
-        "x.-",
-        "от x кг.",
+        "Шведский миндальный торт",
+        "650.-",
+        "от 500 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake19_320.jpg",
         "img/cakes/cakes/big/cake19.jpg",
         "cake19",
-        "Торт 19",
-        "x.-",
-        "от x кг.",
+        "Нежнейший красный бархат с клюквой/вишней",
+        "1300.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake20_320.jpg",
         "img/cakes/cakes/big/cake20.jpg",
         "cake20",
-        "Торт 20",
-        "x.-",
-        "от x кг.",
+        "Карамельный сливочный медовик",
+        "1300.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake21_320.jpg",
         "img/cakes/cakes/big/cake21.jpg",
         "cake21",
-        "Торт 21",
-        "x.-",
-        "от x кг.",
+        "Грушевый со сливочно-творожным кремом, карамелью и грецким орехом",
+        "1400.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake22_320.jpg",
         "img/cakes/cakes/big/cake22.jpg",
         "cake22",
-        "Торт 22",
-        "x.-",
-        "от x кг.",
+        "Освежающий черносмородиновый с нотками лимона",
+        "1300.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake23_320.jpg",
         "img/cakes/cakes/big/cake23.jpg",
         "cake23",
-        "Торт 23",
-        "x.-",
-        "от x кг.",
+        "Нежный фисташковый с вишневым компоте",
+        "1400.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake24_320.jpg",
         "img/cakes/cakes/big/cake24.jpg",
         "cake24",
-        "Торт 24",
-        "x.-",
-        "от x кг.",
+        "Меренговый рулет из кисленьких ягод",
+        '1300.-',
+        "1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake25_320.jpg",
         "img/cakes/cakes/big/cake25.jpg",
         "cake25",
-        "Торт 25",
-        "x.-",
-        "от x кг.",
+        "Грушевый со сливочно-творожным кремом, карамелью и фундуком",
+        "1400.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake27_320.jpg",
         "img/cakes/cakes/big/cake27.jpg",
         "cake27",
-        "Торт 27",
-        "x.-",
-        "от x кг.",
+        "Сникерс",
+        "1400.-",
+        "от 1,5 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake28_320.jpg",
         "img/cakes/cakes/big/cake28-1.jpg",
         "cake28",
-        "Торт 28",
-        "x.-",
+        "Нежный черничный чизкейк с шапочкой из меренги",
+        "1400.-",
         "от x кг.",
         ".wrapper__cakes"
     ).render();
@@ -459,18 +459,18 @@ document.addEventListener('DOMContentLoaded',()=> {
         "img/cakes/cakes/cake29_320.jpg",
         "img/cakes/cakes/big/cake29.jpg",
         "cake29",
-        "Торт 29",
-        "x.-",
-        "от x кг.",
+        "Изысканный шоколадный торт со сливочным чизкейком внутри и печеньем Орео",
+        "1400.-",
+        "от 1,5 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
         "img/cakes/cakes/cake30_320.jpg",
         "img/cakes/cakes/big/cake30.jpg",
         "cake30",
-        "Торт 30",
-        "x.-",
-        "от x кг.",
+        "Нежный йогуртовый тортик с ягодной/фруктовой начинкой (манго/клубника/брусника)",
+        "1300.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
 
@@ -709,7 +709,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "yummy9",
         "Безе",
         "80.-",
-        "1 шт.<p>(от 4 шт.)",
+        "1 шт.<p>(от 5 шт.)",
         ".wrapper__yummy"
     ).render();
     new MenuCard(
@@ -727,7 +727,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "img/cakes/choko/big/6.jpg",
         "chocolate6",
         "Крафтовый молочный бельгийский шоколад с кокосом",
-        "X.-",
+        "400.-",
         "1 шт.<p>(~180-200гр)",
         ".wrapper__chocolate"
     ).render();
@@ -736,7 +736,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "img/cakes/choko/big/3.jpg",
         "chocolate3",
         "Крафтовый молочный бельгийский шоколад с малиной и миндальными лепестками",
-        "X.-",
+        "400.-",
         "1 шт.<p>(~180-200гр)",
         ".wrapper__chocolate"
     ).render();
@@ -745,7 +745,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "img/cakes/choko/big/5.jpg",
         "chocolate5",
         "Крафтовый молочный шоколад с фундуком, карамелью и Бобом тонка",
-        "X.-",
+        "400.-",
         "1 шт.<p>(~180-200гр)",
         ".wrapper__chocolate"
     ).render();
@@ -858,9 +858,11 @@ document.addEventListener('DOMContentLoaded',()=> {
     //     "",
     //     ".wrapper__flowers"
     // ).render();
+
+
 //    Interval();
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 300) {
+            if ($(this).scrollTop() > 800) {
                 $('#arrow_up').fadeIn();
                 //$('.main_logo_mini').fadeIn();
                 $('header').fadeIn();
