@@ -5,17 +5,12 @@ document.addEventListener('DOMContentLoaded',()=> {
 
     const btnMenulist = document.querySelectorAll('.menulist__item'),
       menulistContent = document.querySelectorAll('.js_cakes'),
-              //cakeImg = document.querySelectorAll('.cake__img'),
           wrapperHide = document.querySelector('.wrapper__hide');
+    let prevWrapperIndex = btnMenulist.length;
 
-
-
-
-    let pastWrapperIndex = btnMenulist.length;
     function MenulistContent(i) {
 
          function hideMenulistContent() {
-            console.log('_____________________________')
             menulistContent.forEach(item => {
                 item.classList.add('hide')
                 item.classList.remove('show', 'hide-animation');
@@ -27,16 +22,11 @@ document.addEventListener('DOMContentLoaded',()=> {
             menulistContent[i].classList.remove('hide', 'hide-animation');
 
         }
-
-        console.log('i', i);
-
-        //hideMenulistContent(i);
-        menulistContent[pastWrapperIndex].classList.add('hide-animation')
+        menulistContent[prevWrapperIndex].classList.add('hide-animation')
         setTimeout(() => {
             hideMenulistContent();
             showMenulistContent(i)
         }, 400);
-        //setTimeout(showMenulistContent(i),20000);
     }
 
     function menulistButtons() {
@@ -44,7 +34,7 @@ document.addEventListener('DOMContentLoaded',()=> {
             btnMenulist[i].addEventListener('click', event => {
                 event.preventDefault();
                 MenulistContent(i);
-                pastWrapperIndex = i;
+                prevWrapperIndex = i;
                 //for (j = 0; < btnMenulist.length; j++)
                 btnMenulist.forEach((item) => {
                     item.classList.remove('menulist-btn__active')
@@ -343,8 +333,8 @@ document.addEventListener('DOMContentLoaded',()=> {
         "img/cakes/cakes/big/cake16.jpg",
         "cake16",
         "Морковный, с ореховым пралине, маком, корицей и вареной домашней карамелью",
-        "x.-",
-        "от x кг.",
+        "1400.-",
+        "от 1 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
@@ -371,7 +361,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         "cake18",
         "Шведский миндальный торт",
         "650.-",
-        "от 500 кг.",
+        "от 0.5 кг.",
         ".wrapper__cakes"
     ).render();
     new MenuCard(
@@ -779,7 +769,7 @@ document.addEventListener('DOMContentLoaded',()=> {
     ).render();
     new MenuCard(
         "img/lena/foxy_320.jpg",
-        "https://www.instagram.com/flower_fox_nsk/",
+        "img/lena/foxy_320.jpg",        //"https://www.instagram.com/flower_fox_nsk/",
         "flower_foxy_nsk logo",
         'Оформление цветами от @flower_foxy_nsk',
         "",
@@ -974,6 +964,9 @@ document.addEventListener('DOMContentLoaded',()=> {
         animateCSS('.menulist__item1', animationType2);
         animateCSS('.menulist__item2', animationType2);
         animateCSS('.menulist__item3', animationType2);
+        animateCSS('.menulist__item4', animationType2);
+        animateCSS('.menulist__item5', animationType2);
+
         animateCSS('.button_more_menulist', animationType_InUp);
         //автор
         animateCSS('.about__title', animationType_InUp);
