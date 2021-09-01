@@ -9,18 +9,15 @@ document.addEventListener('DOMContentLoaded',()=> {
     let prevWrapperIndex = btnMenulist.length;
 
     function MenulistContent(i) {
-
          function hideMenulistContent() {
             menulistContent.forEach(item => {
                 item.classList.add('hide')
                 item.classList.remove('show', 'hide-animation');
             });
         }
-
         function showMenulistContent(i = 0) {
             menulistContent[i].classList.add('show');
             menulistContent[i].classList.remove('hide', 'hide-animation');
-
         }
         menulistContent[prevWrapperIndex].classList.add('hide-animation')
         setTimeout(() => {
@@ -35,10 +32,7 @@ document.addEventListener('DOMContentLoaded',()=> {
                 event.preventDefault();
                 MenulistContent(i);
                 prevWrapperIndex = i;
-                //for (j = 0; < btnMenulist.length; j++)
-                btnMenulist.forEach((item) => {
-                    item.classList.remove('menulist-btn__active')
-                })
+                btnMenulist.forEach(item => item.classList.remove('menulist-btn__active') )
                 btnMenulist[i].classList.add('menulist-btn__active');
             });
         }
@@ -120,11 +114,16 @@ document.addEventListener('DOMContentLoaded',()=> {
 
     function addRandomElements() {
         wrapperHide.innerHTML = ``;
-        let random1 = getRandomInt(5) + 1;
+        let random0 = getRandomInt(32) + 1;
+        let random1 = getRandomInt(6) + 1;
+        let random2 = getRandomInt(13) + 1;
+        let random3 = getRandomInt(4) + 2;
+        let random4 = getRandomInt(8) + 1;
+        let random5 = getRandomInt(13) + 1;
         new MenuCard(
-            `"img/cakes/cakes/cake${random1}_320.jpg"`,
+            `"img/cakes/cakes/cake${random0}_320.jpg"`,
             "",
-            "cake1",
+            `cake${random0}`,
             "",
             "",
             "",
@@ -133,23 +132,49 @@ document.addEventListener('DOMContentLoaded',()=> {
         new MenuCard(
             `"img/cakes/cupcakes/cupcake${random1}_320.jpg"`,
             "",
-            "cupcake1",
+            `cupcake${random1}`,
             "",
             "",
             "",
             ".wrapper__hide"
         ).render(1);
         new MenuCard(
-            `"img/cakes/macarons/macarons${random1}_320.jpg"`,
+            `"img/cakes/macarons/macarons${random2}_320.jpg"`,
             "",
-            "macarone1",
+            `macarone${random2}`,
+            "",
+            "",
+            "",
+            ".wrapper__hide"
+        ).render(1);
+        new MenuCard(
+            `"img/cakes/choko/${random3}_320.jpg"`,
+            "",
+            `chocolate${random3}`,
+            "",
+            "",
+            "",
+            ".wrapper__hide"
+        ).render(1);
+        new MenuCard(
+            `"img/cakes/yummy/yummy${random4}_320.jpg"`,
+            "",
+            `yummy${random4}`,
+            "",
+            "",
+            "",
+            ".wrapper__hide"
+        ).render(1);
+        new MenuCard(
+            `"img/cakes/flowers/flowers${random5}_320.jpg"`,
+            "",
+            `flowers${random5}`,
             "",
             "",
             "",
             ".wrapper__hide"
         ).render(1);
     }
-
 
 
 //торты
@@ -175,6 +200,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         ).render();
     }
 */
+
     new MenuCard(
         "img/cakes/cakes/cake1_320.jpg",
         "img/cakes/cakes/big/cake1.jpg",
@@ -905,6 +931,7 @@ document.addEventListener('DOMContentLoaded',()=> {
         };
 
         sliderReShow();
+
         $(window).resize( () => {
 //        $(window).resize( () => {
             $('.slider-track').slick('unslick');
@@ -932,9 +959,10 @@ document.addEventListener('DOMContentLoaded',()=> {
             const animationName = `${prefix}${animation}`;
             const node = document.querySelector(element);
 
-            node.classList.add(`${prefix}animated`, animationName, 'wow');
-            node.setAttribute(`data-wow-duration`,duration);
-            node.setAttribute(`data-wow-delay`,delay);
+            //console.log("node=", node);
+            node.classList.add(`${prefix}animated`, animationName);
+            //node.setAttribute(`data-wow-duration`,duration);
+            //node.setAttribute(`data-wow-delay`,delay);
 
             // When the animation ends, we clean the classes and resolve the Promise
             function handleAnimationEnd(event) {
