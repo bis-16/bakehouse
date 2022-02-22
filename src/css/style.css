@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(roboto.css);
+@import url(@/css/roboto.css);
 @import url(~normalize.css);
 html, body {
   height: 100%;
@@ -74,26 +74,24 @@ h1 {
 .uppercase {
   text-transform: uppercase; }
 
-.background1 {
-  background-image: url("../img/bg/header_new.jpg");
+.background1, .background2 {
   background-size: cover;
+  background-color: lightpink;
   background-position: 50% 0%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #FFF; }
 
+.background1 {
+  background-image: url("@img/bg/header_new.jpg"); }
+
 .background2 {
   height: 40vh;
   background-image: url("../img/bg/header_new.jpg");
-  background-size: cover;
-  background-position: 50% 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFF;
   text-align: center; }
 
+/**********************************************************************************************************************/
 .js_cakes {
   z-index: 10; }
 
@@ -102,23 +100,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -1;
-  	/*
-  	#logo-arrow2 a span {
-  		position: absolute;
-  		bottom: 50px;
-  		left: 50%;
-  		width: 48px;
-  		height: 48px;
-  		margin-left: -24px;
-  		border-left: 1px solid #fff;
-  		border-bottom: 1px solid #fff;
-  		transform: rotate(-45deg);
-  		animation: sdb05 1.5s infinite;
-  		box-sizing: border-box;
-  
-  
-  	}*/ }
+  z-index: -1; }
   .promo-new .container {
     min-height: 100vh;
     display: flex;
@@ -138,7 +120,27 @@ h1 {
         font-size: 3rem; }
         .promo-new .container .promo-new__logo-title span {
           font-size: 1.5rem; }
-
+  .promo-new #logo-arrow2 a span {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    margin-left: -24px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box; }
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0; } }
 @keyframes sdb06 {
   0% {
     transform: rotate(135deg) translate(0, 0);
@@ -431,20 +433,20 @@ svg {
     .menulist .js_cakes a {
       text-decoration: none;
       color: black; }
-  .menulist .wrapper__cakes, .menulist .wrapper__macarons, .menulist .wrapper__cupcakes, .menulist .wrapper__chocolate,
+  .menulist .wrapper__cakes, .menulist .wrapper__macarons, .menulist .wrapper__cupcakes, .menulist .wrapper__tarts, .menulist .wrapper__chocolate,
   .menulist .wrapper__yummy, .menulist .wrapper__flowers, .menulist .wrapper__hide {
     margin-top: 20px;
     z-index: 10; }
-    .menulist .wrapper__cakes .descr, .menulist .wrapper__macarons .descr, .menulist .wrapper__cupcakes .descr, .menulist .wrapper__chocolate .descr,
+    .menulist .wrapper__cakes .descr, .menulist .wrapper__macarons .descr, .menulist .wrapper__cupcakes .descr, .menulist .wrapper__tarts .descr, .menulist .wrapper__chocolate .descr,
     .menulist .wrapper__yummy .descr, .menulist .wrapper__flowers .descr, .menulist .wrapper__hide .descr {
       text-align: right;
       max-width: 320px;
       z-index: 10; }
-    .menulist .wrapper__cakes .img_item, .menulist .wrapper__macarons .img_item, .menulist .wrapper__cupcakes .img_item, .menulist .wrapper__chocolate .img_item,
+    .menulist .wrapper__cakes .img_item, .menulist .wrapper__macarons .img_item, .menulist .wrapper__cupcakes .img_item, .menulist .wrapper__tarts .img_item, .menulist .wrapper__chocolate .img_item,
     .menulist .wrapper__yummy .img_item, .menulist .wrapper__flowers .img_item, .menulist .wrapper__hide .img_item {
       margin: 5px;
       z-index: 10; }
-    .menulist .wrapper__cakes .wt, .menulist .wrapper__macarons .wt, .menulist .wrapper__cupcakes .wt, .menulist .wrapper__chocolate .wt,
+    .menulist .wrapper__cakes .wt, .menulist .wrapper__macarons .wt, .menulist .wrapper__cupcakes .wt, .menulist .wrapper__tarts .wt, .menulist .wrapper__chocolate .wt,
     .menulist .wrapper__yummy .wt, .menulist .wrapper__flowers .wt, .menulist .wrapper__hide .wt {
       text-align: right; }
   .menulist .wrapper__hide .cake-img {

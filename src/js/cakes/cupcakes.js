@@ -36,7 +36,7 @@ export default function cupcakes() {
         "img/cakes/cupcakes/cupcake4_320.jpg",
         "img/cakes/cupcakes/big/cupcake4.jpg",
         "cupcake4",
-        "Ванильные капкейки с домашней карамелью / манго / шоколадным ганашем",
+        "Ванильные с домашней карамелью / манго / шоколадным ганашем",
         "600.-<p>900.-<p>1800.-",
         "4 шт.<p>6 шт.<p>12 шт.",
         ".wrapper__cupcakes"
@@ -52,9 +52,36 @@ export default function cupcakes() {
     ).render();
     new MenuCard(
         "img/cakes/cupcakes/cupcake6_320.jpg",
-        "img/cakes/cakes/big/cake5.jpg",
+        "img/cakes/cupcakes/big/cupcake6.jpg",
         "cupcake6",
-        "Капкейки с имбирем и домашней апельсиновой карамелью",
+        "С имбирем и домашней апельсиновой карамелью",
+        "600.-<p>900.-<p>1800.-",
+        "4 шт.<p>6 шт.<p>12 шт.",
+        ".wrapper__cupcakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cupcakes/cupcake7_320.jpg",
+        "img/cakes/cupcakes/big/cupcake7.jpg",
+        "cupcake7",
+        "RAW капкейки шоколад-брусника-матча, шоколад-апельсин-специи, двойной шоколад-вишня-мускатный орех",
+        "260.-<p>1040.-",
+        "1 шт (от 4 шт.)<p>4 шт.",
+        ".wrapper__cupcakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cupcakes/cupcake8_320.jpg",
+        "img/cakes/cupcakes/big/cupcake8.jpg",
+        "cupcake8",
+        "Красный бархат с манго",
+        "600.-<p>900.-<p>1800.-",
+        "4 шт.<p>6 шт.<p>12 шт.",
+        ".wrapper__cupcakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cupcakes/cupcake9_320.jpg",
+        "img/cakes/cupcakes/big/cupcake9.jpg",
+        "cupcake9",
+        "Ванильные с фисташковым кремом и малиновым курдом",
         "600.-<p>900.-<p>1800.-",
         "4 шт.<p>6 шт.<p>12 шт.",
         ".wrapper__cupcakes"

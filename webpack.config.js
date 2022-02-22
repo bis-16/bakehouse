@@ -48,7 +48,7 @@ module.exports = {
     },
     optimization: optimization(),
     devServer: {
-        port: 4027,
+        port: 4028,
         open: true,
         hot: isDev
     },

@@ -33,6 +33,15 @@ function cakes() {
         ".wrapper__cakes"
     ).render();
     new MenuCard(
+        "img/cakes/cakes/cake37_320.jpg",
+        "img/cakes/cakes/big/cake37.jpg",
+        "cake37",
+        "Классический сметанный торт со сливочно-сметанным кремом и вишней",
+        "1300.-",
+        "от 1 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
         "img/cakes/cakes/cake4_320.jpg",
         "img/cakes/cakes/big/cake4.jpg",
         "cake4",
@@ -333,11 +342,69 @@ function cakes() {
         "img/cakes/cakes/cake36_320.jpg",
         "img/cakes/cakes/big/cake36.jpg",
         "cake36",
-        "торт 36",
-        "1300.-",
+        "Медовик с черносливом",
+        "1400.-",
         "от 1 кг.",
         ".wrapper__cakes"
     ).render();
+
+    new MenuCard(
+        "img/cakes/cakes/cake38_320.jpg",
+        "img/cakes/cakes/big/cake38.jpg",
+        "cake38",
+        "Ванильный торт с фисташковым кремом и вишневым муссом",
+        "1300.-",
+        "1-2 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake39_320.jpg",
+        "img/cakes/cakes/big/cake39.jpg",
+        "cake39",
+        "Птичье молоко",
+        "1400.-",
+        "от 1 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake40_320.jpg",
+        "img/cakes/cakes/big/cake40.jpg",
+        "cake40",
+        "Шоколадный рулет по ГОСТ СССР",
+        "570.-",
+        "от 0,5 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake41_320.jpg",
+        "img/cakes/cakes/big/cake41.jpg",
+        "cake41",
+        "Грушевый торт с карамелью и грецким орехом",
+        "1400.-",
+        "от 1 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake42_320.jpg",
+        "img/cakes/cakes/big/cake42.jpg",
+        "cake42",
+        "Прага ГОСТ СССР",
+        "850.-<p>1400.-",
+        "0,6 кг.<p>1 кг.",
+        ".wrapper__cakes"
+    ).render();
+
+    new MenuCard(
+        "img/cakes/cakes/cake43_320.jpg",
+        "img/cakes/cakes/big/cake43.jpg",
+        "cake43",
+        "Наполеон с рубленым сметанным тестом и заварным кремом",
+        "1400.-",
+        "от 1 кг.",
+        ".wrapper__cakes"
+    ).render();
+
+
 
 }
 

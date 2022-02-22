@@ -71,9 +71,63 @@ export default function yummy() {
         "img/cakes/yummy/yummy10_320.jpg",
         "img/cakes/yummy/big/yummy10.jpg",
         "yummy10",
-        "Павлова",
+        "Павлова (ягодный микс/манго/лимон-черника)",
         "120.-",
         "1 шт.<p>(от 2 шт.)",
+        ".wrapper__yummy"
+    ).render();
+    new MenuCard(
+        "img/cakes/yummy/yummy11_320.jpg",
+        "img/cakes/yummy/big/yummy11.jpg",
+        "yummy11",
+        "Мини чизкейки (клубника/ваниль-вишня/шоколад)",
+        "500.-<p>840.-",
+        "3 шт.<p>6 шт.",
+        ".wrapper__yummy"
+    ).render();
+    new MenuCard(
+        "img/cakes/yummy/yummy12_320.jpg",
+        "img/cakes/yummy/big/yummy12.jpg",
+        "yummy12",
+        "RAW конфетки Как Рафаэлло с обжаренным миндалём. (Без глютена, без белого сахара, без молочки, без яиц)",
+        "500.-<p>600.-",
+        "9 шт.<p>12 шт.",
+        ".wrapper__yummy"
+    ).render();
+    new MenuCard(
+        "img/cakes/yummy/yummy13_320.jpg",
+        "img/cakes/yummy/big/yummy13.jpg",
+        "yummy13",
+        `RAW Сникерс`,
+        "522.-",
+        "6 шт.",
+        ".wrapper__yummy"
+    ).render();
+    new MenuCard(
+        "img/cakes/yummy/yummy14_320.jpg",
+        "img/cakes/yummy/big/yummy14.jpg",
+        "yummy14",
+        "Наборы рождественских  пряников со специями, имбирные, шоколадные и миндальные",
+        "от 900.-",
+        "от 9 шт.",
+        ".wrapper__yummy"
+    ).render();
+    new MenuCard(
+        "img/cakes/yummy/yummy15_320.jpg",
+        "img/cakes/yummy/big/yummy15.jpg",
+        "yummy15",
+        "Соленая карамель",
+        "280.-",
+        "200 гр.",
+        ".wrapper__yummy"
+    ).render();
+    new MenuCard(
+        "img/cakes/yummy/yummy16_320.jpg",
+        "img/cakes/yummy/big/yummy16.jpg",
+        "yummy16",
+        "RAW карамель. (На кокосовом сахаре, сиропе топинамбура, кокосовых сливках и кокосовом масле)",
+        "350.-",
+        "200 гр.",
         ".wrapper__yummy"
     ).render();
 }

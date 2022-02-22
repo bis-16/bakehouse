@@ -32,6 +32,15 @@ export default function flowers() {
         ".wrapper__flowers"
     ).render();
     new MenuCard(
+        "img/cakes/flowers/flowers10_320.jpg",
+        "img/cakes/flowers/big/flowers10.jpg",
+        "flowers10",
+        'Букет клубника в шоколаде и цветы',
+        "2220.-",
+        "(как на фото)",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
         "img/cakes/flowers/flowers11_320.jpg",
         "img/cakes/flowers/big/flowers11.jpg",
         "flowers3",
@@ -85,13 +94,59 @@ export default function flowers() {
         "",
         ".wrapper__flowers"
     ).render();
-// new MenuCard(
-//     "img/cakes/flowers/flowers17_320.jpg",
-//     "img/cakes/flowers/big/flowers17.jpg",
-//     "flowers17",
-//     "название",
-//     "от ХХХ.-",
-//     "",
-//     ".wrapper__flowers"
-// ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers17_320.jpg",
+        "img/cakes/flowers/big/flowers17.jpg",
+        "flowers16",
+        "Цветочный бокс",
+        "от ХХХ.-",
+        "",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers18_320.jpg",
+        "img/cakes/flowers/big/flowers18.jpg",
+        "flowers18",
+        "Сладкий фруктовый набор с композицией",
+        "от 2300.-<p>от 2100.-",
+        "Живые цветы<p>Сухоцветы",
+        ".wrapper__flowers"
+    ).render();
+
+    new MenuCard(
+        "img/cakes/flowers/flowers19_320.jpg",
+        "img/cakes/flowers/big/flowers19.jpg",
+        "flowers19",
+        "6 мини чизкейков (клубника/ваниль-вишня/шоколад) с композицией",
+        "от 2300.-<p>от 2100.-",
+        "Живые цветы<p>Сухоцветы",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers20_320.jpg",
+        "img/cakes/flowers/big/flowers20.jpg",
+        "flowers20",
+        "Шоколад ручной работы, шоколадный шар с домашними маршмэллоу и какао и клубника в шоколаде",
+        "от 1980.-<p>от 1780.-",
+        "Живые цветы<p>Сухоцветы",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers21_320.jpg",
+        "img/cakes/flowers/big/flowers21.jpg",
+        "flowers21",
+        "Букет +  шоколад ручной работы",
+        "от 1800.-",
+        "1 набор",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers22_320.jpg",
+        "img/cakes/flowers/big/flowers22.jpg",
+        "flowers22",
+        "Букет + Бельгийский шоколад ручной работы",
+        "от 1250.-",
+        "1 набор",
+        ".wrapper__flowers"
+    ).render();
 }

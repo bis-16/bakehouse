@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded',()=> {
           wrapperHide = document.querySelector('.wrapper__hide');
     let prevWrapperIndex = btnMenulist.length;
 
+    console.log('btnMenulist=',btnMenulist)
+    console.log('btnMenulist.length=',btnMenulist.length)
+
     function MenulistContent(i) {
          function hideMenulistContent() {
             menulistContent.forEach(item => {

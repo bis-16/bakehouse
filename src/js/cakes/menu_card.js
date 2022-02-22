@@ -22,7 +22,7 @@ class MenuCard {
             <div class="img_item view view-first">
                 <a href=${pathToBigImg} target="${foxyTarget}">
 
-                    <img src=${this.src} alt=${this.alt} class="cake-img flash">
+                    <img src=${this.src} alt=${this.alt} class="cake-img flash" loading="lazy">
                     <div class="mask">
                         <div class="flash data-flash ${foxy}">
                             <svg width="320px" height="320px"  class="border">
@@ -41,7 +41,7 @@ class MenuCard {
         } else { //для рандома
             element.innerHTML = `
             <div class="img_item view view-first flash">
-                <img src=${this.src} alt=${this.alt} class="cake-img">
+                <img src=${this.src} alt=${this.alt} class="cake-img" >
                 <div class="descr"><p>${this.text}</div>
                 <div class="mask2">
 <!--                        <h2>Заголовок</h2>-->
