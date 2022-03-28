@@ -26,9 +26,19 @@ export default function tarts() {
     new MenuCard(
         "img/cakes/tarts/tart3_320.jpg",
         "img/cakes/tarts/big/tart3.jpg",
-        "tart2",
+        "tart3",
         `Тарт шоколад-банан`,
         "190.-",
+        "1 шт. (от 4шт.)",
+        ".wrapper__tarts"
+    ).render();
+
+    new MenuCard(
+        "img/cakes/tarts/tart4_320.jpg",
+        "img/cakes/tarts/big/tart4.jpg",
+        "tart4",
+        `Песочные корзиночки со сгущенкой / вишневым соусом / яблочным джемом с белковым кремом / с крем-чизом с чаем матча`,
+        "X.-",
         "1 шт. (от 4шт.)",
         ".wrapper__tarts"
     ).render();

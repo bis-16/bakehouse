@@ -208,4 +208,50 @@ export default function choko() {
         ".wrapper__chocolate"
     ).render();
 
+    new MenuCard(
+        "img/cakes/choko/25_320.jpg",
+        "img/cakes/choko/big/25.jpg",
+        "chocolate",
+        "Белый шоколад с фисташкой и сушёными ягодами",
+        "X.-<p>X.-",
+        "1 шт. (100гр.)<p>1 шт. (200гр.)",
+        ".wrapper__chocolate"
+    ).render();
+    new MenuCard(
+        "img/cakes/choko/26_320.jpg",
+        "img/cakes/choko/big/26.jpg",
+        "chocolate",
+        "Тематические праздничные шоколадные фигуры",
+        "X.-<p>X.-",
+        "1 шт. (40гр.)<p>1 шт. (70гр.)",
+        ".wrapper__chocolate"
+    ).render();
+    new MenuCard(
+        "img/cakes/choko/27_320.jpg",
+        "img/cakes/choko/big/27.jpg",
+        "chocolate",
+        "Корпусные конфеты (карамель, молочный шоколад-фундук, темный шоколад-малина)",
+        "X.-",
+        "1 уп.",
+        ".wrapper__chocolate"
+    ).render();
+    new MenuCard(
+        "img/cakes/choko/28_320.jpg",
+        "img/cakes/choko/big/28.jpg",
+        "chocolate",
+        "Трюфели на темном шоколаде с вишней, апельсином, конфеты манго-кешью в темном шоколаде",
+        "X.-",
+        "1 уп.",
+        ".wrapper__chocolate"
+    ).render();
+    new MenuCard(
+        "img/cakes/choko/29_320.jpg",
+        "img/cakes/choko/big/29.jpg",
+        "chocolate",
+        "",
+        "X.-",
+        "1 уп.",
+        ".wrapper__chocolate"
+    ).render();
+
 }

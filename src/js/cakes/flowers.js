@@ -149,4 +149,22 @@ export default function flowers() {
         "1 набор",
         ".wrapper__flowers"
     ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers23_320.jpg",
+        "img/cakes/flowers/big/flowers23.jpg",
+        "flowers22",
+        "Букет из тюльпанов и 8 клубничек в шоколаде",
+        "от 1250.-",
+        "1 набор",
+        ".wrapper__flowers"
+    ).render();
+    new MenuCard(
+        "img/cakes/flowers/flowers24_320.jpg",
+        "img/cakes/flowers/big/flowers24.jpg",
+        "flowers",
+        "Цветочный бокс",
+        "от ХХХ.-",
+        "",
+        ".wrapper__flowers"
+    ).render();
 }

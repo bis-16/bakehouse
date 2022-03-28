@@ -34,14 +34,15 @@ const popupBigImages = () => {
             let windowWide = window.innerWidth
             console.log("target=", target);
             // console.log("windowWide=", typeof (windowWide), windowWide);
-            if ((windowWide > 767) && (target && (target.classList.contains('cake_img'))
+            if ((windowWide > 767) && (target && (target.classList.contains('cake_2img'))
+            // if ((windowWide > 767) && (target
                 || (target.classList.contains('mask'))
                 || (target.classList.contains('data-flash'))
             )) {
                 console.log('1-1');
                 imgPopup.style.display = 'flex';
                 const path = target.parentNode.parentNode.getAttribute('href');
-                // console.log("path=", target.parentNode.parentNode)
+                console.log("path=", target.parentNode.parentNode)
                 bigImage.setAttribute('src', path)
             } else {
                 console.log("else");

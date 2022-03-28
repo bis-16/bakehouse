@@ -130,4 +130,23 @@ export default function yummy() {
         "200 гр.",
         ".wrapper__yummy"
     ).render();
+
+    new MenuCard(
+        "img/cakes/yummy/yummy17_320.jpg",
+        "img/cakes/yummy/big/yummy17.jpg",
+        "yummy",
+        "Павлова ягодная/с манго/ черника-лимон",
+        "X.-",
+        "от 2 шт.",
+        ".wrapper__yummy"
+    ).render();
+    new MenuCard(
+        "img/cakes/yummy/yummy18_320.jpg",
+        "img/cakes/yummy/big/yummy18.jpg",
+        "yummy",
+        "Творожные сырки шоколадные с карамелью / вишневым соусом",
+        "X.-",
+        "от 4 шт.",
+        ".wrapper__yummy"
+    ).render();
 }

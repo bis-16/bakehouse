@@ -404,6 +404,35 @@ function cakes() {
         ".wrapper__cakes"
     ).render();
 
+    new MenuCard(
+        "img/cakes/cakes/cake44_320.jpg",
+        "img/cakes/cakes/big/cake44.jpg",
+        "cake",
+        "Трюфельный очень шоколадный торт с абрикосовой пропиткой",
+        "X.-",
+        "от 1 кг.",
+        ".wrapper__cakes"
+    ).render();
+
+    new MenuCard(
+        "img/cakes/cakes/cake45_320.jpg",
+        "img/cakes/cakes/big/cake45.jpg",
+        "cake",
+        "Прага ГОСТ классика",
+        "X.-",
+        "от 0.5 кг.",
+        ".wrapper__cakes"
+    ).render();
+    new MenuCard(
+        "img/cakes/cakes/cake46_320.jpg",
+        "img/cakes/cakes/big/cake46.jpg",
+        "cake",
+        "Торт из ДЕТСТВА шоколадный с вишней",
+        "X.-",
+        "от 1 кг.",
+        ".wrapper__cakes"
+    ).render();
+
 
 
 }
